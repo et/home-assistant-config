@@ -1,0 +1,18 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+discovery:
+  ignore:
+  - homekit
+
+lutron_caseta_pro:
+    bridges:
+      - host: !secret lutron_caseta_pro_bridges_host
+        mac: !secret lutron_caseta_pro_bridges_mac
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include sensors.yaml

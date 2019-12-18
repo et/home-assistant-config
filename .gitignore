@@ -1,0 +1,10 @@
+home-assistant.log
+home-assistant_v2.db
+
+# Ignore folders.
+__pycache__
+.storage
+.cloud
+deps
+tts
+secrets.yaml
