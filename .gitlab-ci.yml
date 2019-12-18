@@ -26,6 +26,5 @@ before_script:
 
 test:
   script:
-    - python setup.py test
     - pip install homeassistant
     - hass --script check_config -c .
