@@ -3,6 +3,7 @@ stages:
 
 test:
   stage: test
-  image: homeassistant/amd64-homeassistant
   script:
-    - hass --script check_config -c .
+  - apt-get install -y python-dev python-pip
+  - pip3 install homeassistant
+  - hass --script check_config -c .
