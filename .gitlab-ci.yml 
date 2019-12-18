@@ -1,7 +1,0 @@
-before_script:
-  - apt-get install -y python-dev python-pip
-  - pip3 install homeassistant
-
-verify:
-  script:
-  - hass --script check_config -c .
