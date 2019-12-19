@@ -1,8 +1,19 @@
-- alias: Lights - Turn Off Garage Light After Midnight
+- alias: Lights - Turn On Lights in basement
 
   trigger:
     - platform: time
-      at: '20:45:00'
+      at: '19:45:00'
+
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.family_room_main_lights
+
+- alias: Lights - Turn Off Lights in basement
+
+  trigger:
+    - platform: time
+      at: '21:45:00'
 
   action:
     - service: light.turn_off
