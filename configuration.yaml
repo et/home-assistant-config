@@ -5,6 +5,7 @@ default_config:
 discovery:
   ignore:
   - homekit
+  - igd
 
 lutron_caseta_pro:
     bridges:
