@@ -7,4 +7,7 @@ __pycache__
 .cloud
 deps
 tts
+
+# Sensitive info
+lutron_caseta_pro_*.json
 secrets.yaml
