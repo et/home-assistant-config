@@ -11,3 +11,6 @@ tts
 # Sensitive info
 lutron_caseta_pro_*.json
 secrets.yaml
+
+# Other
+*.swp

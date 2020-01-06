@@ -2,6 +2,17 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+homeassistant:
+  name: Home
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
+  unit_system: imperial
+  time_zone: America/Denver
+  auth_providers:
+   - type: homeassistant
+  packages: !include_dir_named integrations
+
 discovery:
   ignore:
   - homekit
@@ -12,7 +23,14 @@ lutron_caseta_pro:
       - host: !secret lutron_caseta_pro_bridges_host
         mac: !secret lutron_caseta_pro_bridges_mac
 
-group: !include groups.yaml
+pi_hole:
+  host: !secret pi_hole_host
+  ssl: false
+  verify_ssl: false
+
+
+
+group: !include_dir_merge_named group
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml

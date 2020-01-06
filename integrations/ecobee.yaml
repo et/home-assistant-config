@@ -1,0 +1,7 @@
+# Activates the ecobee component.
+#
+# https://www.home-assistant.io/integrations/ecobee/ 
+#
+#
+ecobee:
+  api_key: !secret ecobee_api_key
