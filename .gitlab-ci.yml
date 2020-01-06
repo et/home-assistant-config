@@ -27,5 +27,6 @@ before_script:
 test:
   script:
     - mv secrets.yaml.example secrets.yaml
+    - pip install homeassistant-pyozw
     - pip install homeassistant
     - hass --script check_config -c .

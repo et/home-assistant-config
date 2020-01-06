@@ -12,5 +12,12 @@ tts
 lutron_caseta_pro_*.json
 secrets.yaml
 
-# Other
+# Zwave
+options.xml
+OZW_Log.txt
+pyozw.sqlite
+zwcfg_*
+zwscene.xml
+
+# IDE files
 *.swp
