@@ -2,6 +2,10 @@
   entities:
     light.family_room_main_lights:
       state: off
+    switch.aeon_labs_zw096_smart_switch_6_switch:
+      state: on
+    switch.aeon_labs_zw096_smart_switch_6_switch_2:
+      state: on
 
     media_player.you_roku_broku:
       state: on

@@ -28,10 +28,11 @@ pi_hole:
   ssl: false
   verify_ssl: false
 
-
-
 group: !include_dir_merge_named group
-automation: !include automations.yaml
+automation: !include_dir_merge_list automations
 script: !include scripts.yaml
 scene: !include scenes.yaml
 sensor: !include sensors.yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
