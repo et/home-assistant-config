@@ -25,7 +25,7 @@ before_script:
   - apt-get -yq update
   - apt-get -yq install make libudev-dev g++ libyaml-dev
   - apt-get -yq install python3-dev 
-  - python -V  # Print out python version for debugging
+  - python3 -V  # Print out python version for debugging
   - pip install virtualenv
   - virtualenv venv
   - source venv/bin/activate
