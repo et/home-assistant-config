@@ -1,0 +1,10 @@
+---
+# Activates the lutron caseta pro component.
+#
+# https://github.com/upsert/lutron-caseta-pro
+#
+#
+lutron_caseta_pro:
+  bridges:
+    - host: !secret lutron_caseta_pro_bridges_host
+      mac: !secret lutron_caseta_pro_bridges_mac

@@ -1,6 +1,7 @@
+---
 # Activates the ecobee component.
 #
-# https://www.home-assistant.io/integrations/ecobee/ 
+# https://www.home-assistant.io/integrations/ecobee/
 #
 #
 ecobee:
