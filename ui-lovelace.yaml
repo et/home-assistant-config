@@ -1,4 +1,9 @@
 ---
+title: Home Control Panel
+# resources: !include_dir_list lovelace/resources
 resources:
-  - url: /local/battery-entity.js?v=0.1
+  - url: /local/battery-entity.js
     type: module
+# views:
+#   - !include lovelace/views/dashboard.yaml
+#   - !include lovelace/views/batteries.yaml

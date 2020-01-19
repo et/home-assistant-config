@@ -1,0 +1,7 @@
+---
+path: batteries
+title: Batteries
+icon: mdi:home-assistant
+cards:
+  - type: custom:battery-entity
+    entity: sensor.schlage_allegion_be469zp_connect_smart_deadbolt_battery_level

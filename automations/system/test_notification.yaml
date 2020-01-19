@@ -1,0 +1,6 @@
+---
+- alias: 'Send Notification'
+  trigger:
+  action:
+    service: notify.et
+    message: 'Notification text'

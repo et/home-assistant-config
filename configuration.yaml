@@ -18,10 +18,10 @@ discovery:
     - homekit
     - igd
 
-# lutron_caseta_pro:
-#   bridges:
-#     - host: !secret lutron_caseta_pro_bridges_host
-#       mac: !secret lutron_caseta_pro_bridges_mac
+lutron_caseta_pro:
+  bridges:
+    - host: !secret lutron_caseta_pro_bridges_host
+      mac: !secret lutron_caseta_pro_bridges_mac
 
 pi_hole:
   host: !secret pi_hole_host
@@ -29,8 +29,32 @@ pi_hole:
   verify_ssl: false
 
 group: !include_dir_merge_named group
-automation: !include_dir_merge_list automations
-script: !include_dir_merge_named scripts
+# automation: !include_dir_merge_list automations
+# automation:
+#   - alias: 'Send Notification'
+#     trigger:
+#     action:
+#       service: notify.et
+#       message: 'Notification text'
+
+
+shell_command:
+  roku_on: "curl -X POST {{ roku_host }}/keypress/home"
+  roku_youtube_phish: "curl -X POST {{ roku_host}}/launch/837?contentId=8BN_Tyl8c00&mediaType=live"
+
+script:
+  roku_phish_youtube_on:
+    alias: "Turn on Phish Youtube"
+    sequence:
+      - service: shell_command.roku_on
+        data_template:
+          roku_host: !secret roku_host
+      - delay:
+          seconds: 2
+      - service: shell_command.roku_youtube_phish
+        data_template:
+          roku_host: !secret roku_host
+
 scene: !include_dir_merge_list scenes
 sensor: !include sensors.yaml
 
