@@ -1,0 +1,11 @@
+---
+# Turn off the front porch light at sunrise
+#
+alias: 'Front Porch Sunrise'
+trigger:
+  platform: sun
+  event: sunrise
+  offset: '+00:00:00'
+action:
+  - service: light.turn_off
+    entity_id: light.front_porch_overhead_light

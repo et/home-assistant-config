@@ -1,0 +1,11 @@
+---
+# Turn on the front porch light at sunset
+#
+alias: 'Front Porch Sunset'
+trigger:
+  platform: sun
+  event: sunset
+  offset: '+00:00:00'
+action:
+  - service: light.turn_on
+    entity_id: light.front_porch_overhead_light
