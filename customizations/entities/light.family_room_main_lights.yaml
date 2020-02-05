@@ -6,4 +6,4 @@
 #
 light.family_room_main_lights:
   friendly_name: Family Room Lights
-  icon: mdi:spotlight
+  icon: mdi:spotlight-beam

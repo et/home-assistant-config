@@ -12,6 +12,7 @@ homeassistant:
   auth_providers:
     - type: homeassistant
   packages: !include_dir_named integrations
+  customize: !include_dir_merge_named ./customizations/entities
 
 discovery:
   ignore:
@@ -29,14 +30,7 @@ pi_hole:
   verify_ssl: false
 
 group: !include_dir_merge_named group
-automation: !include_dir_merge_list automations
-# automation:
-#   - alias: 'Send Notification'
-#     trigger:
-#     action:
-#       service: notify.et
-#       message: 'Notification text'
-
+automation: !include_dir_list automations
 
 shell_command:
   roku_on: "curl -X POST {{ roku_host }}/keypress/home"
@@ -54,6 +48,16 @@ script:
       - service: shell_command.roku_youtube_phish
         data_template:
           roku_host: !secret roku_host
+  test_notification:
+    alias: "Test notification"
+    sequence:
+      - service: notify.mobile_app_et
+        data:
+          title: "Test notification"
+          message: "This is a test"
+          data:
+            push:
+              badge: 25
 
 scene: !include_dir_merge_list scenes
 sensor: !include sensors.yaml

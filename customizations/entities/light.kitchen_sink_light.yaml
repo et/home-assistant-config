@@ -1,0 +1,9 @@
+---
+#
+# Customizes the kitchen sink lights in Home Assistant
+#
+# https://www.home-assistant.io/docs/configuration/customizing-devices/
+#
+light.kitchen_sink_light:
+  friendly_name: Kitchen Sink Light
+  icon: mdi:track-light
