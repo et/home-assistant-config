@@ -29,8 +29,8 @@ pi_hole:
   ssl: false
   verify_ssl: false
 
-group: !include_dir_merge_named group
-automation: !include_dir_list automations
+automation: !include automations.yaml
+automation split: !include_dir_list automations
 
 shell_command:
   roku_on: "curl -X POST {{ roku_host }}/keypress/home"
@@ -64,3 +64,8 @@ sensor: !include sensors.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
+
+device_tracker:
+  - platform: tile
+    username: !secret tile_username
+    password: !secret tile_password

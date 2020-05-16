@@ -1,0 +1,8 @@
+---
+# Activates the roku component.
+#
+# https://www.home-assistant.io/integrations/roku/
+#
+#
+roku:
+  - host: !secret roku_host

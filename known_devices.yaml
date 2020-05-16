@@ -1,0 +1,16 @@
+
+tile_50a31b94b0722873:
+  hide_if_away: false
+  icon: mdi:view-grid
+  mac:
+  name: tile 50a31b94b0722873
+  picture:
+  track: true
+
+tile_p_031e2300842cf80bfe10d96d47115583:
+  hide_if_away: false
+  icon: mdi:view-grid
+  mac:
+  name: tile p 031e2300842cf80bfe10d96d47115583
+  picture:
+  track: true

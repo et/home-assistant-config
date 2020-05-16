@@ -1,0 +1,12 @@
+---
+# Turn lights off when door contact sensor is off
+#
+alias: Turn laundry lights off when someone leaves
+trigger:
+  - platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'on'
+    to: 'off'
+action:
+  - service: light.turn_off
+    entity_id:  light.laundry_room_main_lights

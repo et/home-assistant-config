@@ -19,5 +19,8 @@ pyozw.sqlite
 zwcfg_*
 zwscene.xml
 
+# Tile
+*.tile.conf
+
 # IDE files
 *.swp

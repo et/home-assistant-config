@@ -1,25 +1,12 @@
----
+# This file is used by the automations editor
+# in the Home Assistant frontend.
 #
-# https://www.home-assistant.io/docs/automation/
+# I personally do not use it, mainly because I like doing this in YAML.
+# However, from time to time, it is helpful to click a bit and see
+# what the frontend makes of it.
 #
-- alias: Lights - Turn On Lights in basement
-
-  trigger:
-    - platform: time
-      at: '19:45:00'
-
-  action:
-    - service: light.turn_on
-      data:
-        entity_id: light.family_room_main_lights
-
-- alias: Lights - Turn Off Lights in basement
-
-  trigger:
-    - platform: time
-      at: '21:45:00'
-
-  action:
-    - service: light.turn_off
-      data:
-        entity_id: light.family_room_main_lights
+# This file must exist for the frontend Automation editor to work.
+# Hence, it is here, empty.
+#
+# If you are looking for my automations: See automations folder.
+[]
